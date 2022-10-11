@@ -120,27 +120,24 @@ public class Silly implements Comparable<Silly>{
         y.countStatic();
         x.countStatic();
         x.countStatic();
-        int[] expected_values = {3, 4, 3, 3};
+        int[] expected_values = {0, 1, 2, 3};
 
         System.out.println("The countStatic calls will return " + Arrays.toString(expected_values));
     }
 
     /**
      * 3. Whenever we try to build a string with an Object, the toString()
-     *    method is called. This is equivalent to the __str__ method in Python.
-     *
-     *    (Relevant reading: 2.3. toString)
-     *
+     * method is called. This is equivalent to the __str__ method in Python.
+     * <p>
+     * (Relevant reading: 2.3. toString)
+     * <p>
      * Return the String representation of this Silly object (i.e. its name).
      *
      * @return the name of this Silly.
      */
     @Override
-    public String toString(){
-        // TODO (Task 3): Implement the body of this method!
-        return "Silly{" +
-                "name='" + name + '\'' +
-                '}';
+    public String toString() {
+        return this.name;
     }
 
     /**
